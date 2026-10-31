@@ -1,0 +1,32 @@
+# Lyrics Overlay configuration
+
+[ui]
+mode = "compact"           # "compact" | "karaoke" — стартовый режим
+opacity = 0.85             # фон виджета
+font_family = ""           # пусто = системный дефолт
+font_size = 22
+accent = "#22d3ee"         # цвет прогресс-бара
+show_artwork = true        # показывать обложку трека
+compact_x = -1944            # позиция компакт-панели
+compact_y = 1044
+compact_width = 560
+compact_height = 210       # при длинных строках текста увеличьте
+karaoke_width = 900
+karaoke_height = 600
+karaoke_bottom = true      # karaoke заякорен к низу экрана, по центру
+fade_on_pause = true
+
+[lyrics]
+cache_dir = "cache"
+request_timeout = 10       # секунды
+sync_offset_s = 0.0        # сдвиг текста: положительный = строки позже, отрицательный = раньше
+show_plain_when_unsynced = true   # при отсутствии таймкодов показывать обычный текст
+genius_token = ""          # необязательно: https://genius.com/api-clients -> токен; лучше в token.local.toml
+
+[monitor]
+poll_interval = 0.5        # секунды между опросами плеера
+
+[hotkeys]
+toggle_mode = "ctrl+alt+l"       # переключить compact/karaoke
+toggle_clickthrough = "ctrl+alt+k"
+toggle_visible = "ctrl+alt+j"
